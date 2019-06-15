@@ -2,7 +2,9 @@
 // Sounds
 const waves = document.getElementById("waves");
 const clickMe = document.getElementById("clickMe");
+const busSong = document.getElementById("busSong");
 const boat = document.getElementById("boat");
+const bus = document.getElementById("bus");
 var soundFlag = true;
 
 // On click
@@ -11,6 +13,13 @@ boat.onclick = function () {
         waves.pause();
         waves.currentTime = 0;
         waves.play();
+    }
+}
+bus.onclick = function () {
+    if (soundFlag) {
+        busSong.pause();
+        busSong.currentTime = 0;
+        busSong.play();
     }
 }
 
@@ -22,3 +31,12 @@ boat.onmouseover = function () {
         clickMe.play();
     }
 }
+
+
+// Prevent Page Refresh
+const links = document.getElementsByClassName("nav-link")
+for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", function (event) {
+        event.preventDefault()
+    });
+} 
