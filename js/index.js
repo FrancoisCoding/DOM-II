@@ -3,6 +3,7 @@
 const waves = document.getElementById("waves");
 const clickMe = document.getElementById("clickMe");
 const busSong = document.getElementById("busSong");
+const incorrect = document.getElementById("incorrect");
 const boat = document.getElementById("boat");
 const bus = document.getElementById("bus");
 var soundFlag = true;
@@ -40,6 +41,15 @@ window.onkeydown = function() {
 // Wheel
 window.onmousewheel = function() {
       console.log("Just Keep Scrolling.");
+};
+
+// Drag/Drop
+window.ondrag = function() {
+      if (soundFlag) {
+        incorrect.pause();
+        incorrect.currentTime = 0;
+        incorrect.play();
+    }
 };
 
 // Prevent Page Refresh
