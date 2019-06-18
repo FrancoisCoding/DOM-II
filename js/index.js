@@ -32,6 +32,10 @@ boat.onmouseover = function () {
     }
 }
 
+// Key Down
+window.onkeydown = function() {
+      alert("Don't type here.");
+};
 
 // Prevent Page Refresh
 const links = document.getElementsByClassName("nav-link")
