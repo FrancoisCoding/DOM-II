@@ -37,6 +37,11 @@ window.onkeydown = function() {
       alert("Don't type here.");
 };
 
+// Wheel
+window.onmousewheel = function() {
+      console.log("Just Keep Scrolling.");
+};
+
 // Prevent Page Refresh
 const links = document.getElementsByClassName("nav-link")
 for (var i = 0; i < links.length; i++) {
