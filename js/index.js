@@ -9,6 +9,7 @@ const incorrect = document.getElementById("incorrect");
 const boat = document.getElementById("boat");
 const bus = document.getElementById("bus");
 var textInput = document.getElementsByClassName("textInput");
+var html = document.getElementsByTagName("html");
 var soundFlag = true;
 
 // On click
@@ -57,7 +58,7 @@ window.ondrag = function () {
 
 // Load
 window.onload = function () {
-    alert("Welcome!! Please do not type, drag, or click links");
+    alert("Welcome!! Please do not type, drag, click links, resize, doubleclick, or  ");
 };
 
 // Focus
@@ -68,7 +69,19 @@ for (var i = 0; i < textInput.length; i++) {
 }
 
 // Resize
+window.onresize = function () {
+    alert("Please Change Me Back");
+};
 
+// Double Click
+window.ondblclick = function () {
+    html[0].style.background = "red"
+};
+
+// On Mouse Out
+bus.onmouseout = function () {
+    alert("Please CLICK on the bus image");
+};
 
 // Prevent Page Refresh
 for (var i = 0; i < links.length; i++) {
