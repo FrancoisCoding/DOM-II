@@ -33,7 +33,6 @@
                 justify-content: space-around;
             }
 
-
             a {
                 font-size: 1.6rem;
                 color: @font-color;
@@ -44,3 +43,22 @@
 }
 
 // .main-navigation
+h1 {
+                .keys(fade-in; {
+                        0% {
+                            color: @color; opacity: 0;
+                        }
+
+                        50% {
+                            color: @color; opacity: .5;
+                        }
+
+                        100% {
+                            color: @color; opacity: 1;
+                        }
+                    }
+
+                );
+
+                .anim(fade-in 1s linear infinite alternate)
+            }

@@ -1,11 +1,14 @@
 // Your code goes here
-// Sounds
+
+// Variables
+const links = document.getElementsByClassName("nav-link");
 const waves = document.getElementById("waves");
 const clickMe = document.getElementById("clickMe");
 const busSong = document.getElementById("busSong");
 const incorrect = document.getElementById("incorrect");
 const boat = document.getElementById("boat");
 const bus = document.getElementById("bus");
+var textInput = document.getElementsByClassName("textInput");
 var soundFlag = true;
 
 // On click
@@ -34,28 +37,42 @@ boat.onmouseover = function () {
 }
 
 // Key Down
-window.onkeydown = function() {
-      alert("Don't type here.");
+window.onkeydown = function () {
+    alert("Don't type here.");
 };
 
 // Wheel
-window.onmousewheel = function() {
-      console.log("Just Keep Scrolling.");
+window.onmousewheel = function () {
+    console.log("Just Keep Scrolling.");
 };
 
 // Drag/Drop
-window.ondrag = function() {
-      if (soundFlag) {
+window.ondrag = function () {
+    if (soundFlag) {
         incorrect.pause();
         incorrect.currentTime = 0;
         incorrect.play();
     }
 };
 
+// Load
+window.onload = function () {
+    alert("Welcome!! Please do not type, drag, or click links");
+};
+
+// Focus
+for (var i = 0; i < textInput.length; i++) {
+    textInput[i].addEventListener("focus", function () {
+        console.log("No Typing!!")
+    });
+}
+
+// Resize
+
+
 // Prevent Page Refresh
-const links = document.getElementsByClassName("nav-link")
 for (var i = 0; i < links.length; i++) {
     links[i].addEventListener("click", function (event) {
         event.preventDefault()
     });
-} 
+}
